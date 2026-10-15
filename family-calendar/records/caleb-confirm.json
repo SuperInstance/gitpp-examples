@@ -1,0 +1,8 @@
+{
+  "id": "caleb-confirm",
+  "kind": "witness",
+  "parents": ["dr-visit"],
+  "effects": {
+    "caleb.tuesday_confirmed": true
+  }
+}

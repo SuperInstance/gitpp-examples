@@ -1,0 +1,8 @@
+{
+  "id": "caregiver",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "caregiver.saturday": "with grandma"
+  }
+}

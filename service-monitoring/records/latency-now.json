@@ -1,0 +1,9 @@
+{
+  "id": "latency-now",
+  "kind": "witness",
+  "parents": ["genesis"],
+  "effects": {
+    "now.latency_ms": 142,
+    "now.timestamp": "2026-10-15T22:00:00Z"
+  }
+}

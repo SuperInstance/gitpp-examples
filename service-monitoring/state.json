@@ -1,0 +1,53 @@
+{
+  "state": {
+    "env.staging.region": "us-east-2",
+    "alert.disk_pct.crit": 95,
+    "now.error_rate": 0.003,
+    "alert.disk_pct.warn": 80,
+    "now.timestamp": "2026-10-15T22:00:00Z",
+    "now.disk_pct": 73,
+    "env.prod.canary": false,
+    "alerts.firing_count": 0,
+    "env.staging.canary": true,
+    "project": "service-monitor",
+    "env.prod.replicas": 6,
+    "service": "api",
+    "alert.error_rate.crit": 0.05,
+    "alert.error_rate.warn": 0.01,
+    "env.prod.region": "us-east-1",
+    "env.staging.replicas": 2,
+    "alert.latency_ms.warn": 400,
+    "alert.latency_ms.crit": 800,
+    "alerts.suppressed": "latency_ms",
+    "now.latency_ms": 142,
+    "version": "1.4.2"
+  },
+  "order": [
+    "genesis",
+    "disk-now",
+    "error-rate-now",
+    "latency-now",
+    "prod-config",
+    "staging-config",
+    "thresholds",
+    "latency-bump",
+    "alert-state"
+  ],
+  "conflicts": [
+    {
+      "key": "alert.latency_ms.warn",
+      "winner": "latency-bump",
+      "losers": [
+        "thresholds"
+      ]
+    },
+    {
+      "key": "alert.latency_ms.crit",
+      "winner": "latency-bump",
+      "losers": [
+        "thresholds"
+      ]
+    }
+  ],
+  "orphans": []
+}

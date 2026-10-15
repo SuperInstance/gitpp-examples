@@ -1,0 +1,9 @@
+{
+  "id": "caleb",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "caleb.tuesday": "soccer",
+    "caleb.thursday": "tutoring"
+  }
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "id": "caleb-confirm",
+    "kind": "witness",
+    "parents": [
+      "dr-visit"
+    ],
+    "effects": {
+      "caleb.tuesday_confirmed": true
+    }
+  },
+  {
+    "id": "caleb",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "caleb.tuesday": "soccer",
+      "caleb.thursday": "tutoring"
+    }
+  },
+  {
+    "id": "caregiver",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "caregiver.saturday": "with grandma"
+    }
+  },
+  {
+    "id": "dr-visit",
+    "kind": "override",
+    "parents": [
+      "caleb"
+    ],
+    "effects": {
+      "caleb.tuesday": "doctor"
+    },
+    "reason": "annual checkup, soccer can move"
+  },
+  {
+    "id": "genesis",
+    "kind": "task",
+    "parents": [],
+    "effects": {
+      "project": "family-calendar",
+      "timezone": "America/Los_Angeles",
+      "status": "active"
+    }
+  },
+  {
+    "id": "grandma",
+    "kind": "witness",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "grandma.notes": "see kids Saturday"
+    }
+  },
+  {
+    "id": "leo",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "leo.friday": "drum lesson"
+    }
+  },
+  {
+    "id": "marina",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "marina.monday": "yoga",
+      "marina.wednesday": "book club"
+    }
+  }
+]

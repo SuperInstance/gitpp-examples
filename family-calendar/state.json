@@ -1,0 +1,35 @@
+{
+  "state": {
+    "caleb.tuesday_confirmed": true,
+    "grandma.notes": "see kids Saturday",
+    "status": "active",
+    "caleb.thursday": "tutoring",
+    "project": "family-calendar",
+    "timezone": "America/Los_Angeles",
+    "leo.friday": "drum lesson",
+    "caleb.tuesday": "doctor",
+    "caregiver.saturday": "with grandma",
+    "marina.monday": "yoga",
+    "marina.wednesday": "book club"
+  },
+  "order": [
+    "genesis",
+    "caleb",
+    "caregiver",
+    "dr-visit",
+    "caleb-confirm",
+    "grandma",
+    "leo",
+    "marina"
+  ],
+  "conflicts": [
+    {
+      "key": "caleb.tuesday",
+      "winner": "dr-visit",
+      "losers": [
+        "caleb"
+      ]
+    }
+  ],
+  "orphans": []
+}

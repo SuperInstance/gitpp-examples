@@ -1,0 +1,8 @@
+{
+  "id": "leo",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "leo.friday": "drum lesson"
+  }
+}

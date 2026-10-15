@@ -1,0 +1,27 @@
+{
+  "at": "dr-visit",
+  "closureRoot": "a487b2df4c6941a2aa47deecb058d98f0ec0b7efe607143d5c1055117d06c294",
+  "conflicts": [
+    {
+      "key": "caleb.tuesday",
+      "losers": [
+        "caleb"
+      ],
+      "winner": "dr-visit"
+    }
+  ],
+  "orphanCount": 0,
+  "state": {
+    "caleb.thursday": "tutoring",
+    "caleb.tuesday": "doctor",
+    "caleb.tuesday_confirmed": true,
+    "caregiver.saturday": "with grandma",
+    "grandma.notes": "see kids Saturday",
+    "leo.friday": "drum lesson",
+    "marina.monday": "yoga",
+    "marina.wednesday": "book club",
+    "project": "family-calendar",
+    "status": "active",
+    "timezone": "America/Los_Angeles"
+  }
+}

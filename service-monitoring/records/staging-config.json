@@ -1,0 +1,10 @@
+{
+  "id": "staging-config",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "env.staging.region": "us-east-2",
+    "env.staging.replicas": 2,
+    "env.staging.canary": true
+  }
+}

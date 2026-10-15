@@ -1,0 +1,10 @@
+{
+  "id": "genesis",
+  "kind": "task",
+  "parents": [],
+  "effects": {
+    "project": "service-monitor",
+    "service": "api",
+    "version": "1.4.2"
+  }
+}

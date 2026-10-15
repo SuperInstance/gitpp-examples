@@ -1,0 +1,8 @@
+{
+  "id": "match-1-witness",
+  "kind": "witness",
+  "parents": ["match-1"],
+  "effects": {
+    "match-1.confirmed": true
+  }
+}

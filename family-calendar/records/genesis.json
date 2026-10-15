@@ -1,0 +1,10 @@
+{
+  "id": "genesis",
+  "kind": "task",
+  "parents": [],
+  "effects": {
+    "project": "family-calendar",
+    "timezone": "America/Los_Angeles",
+    "status": "active"
+  }
+}

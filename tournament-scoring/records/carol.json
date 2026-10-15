@@ -1,0 +1,9 @@
+{
+  "id": "carol",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "player.carol.elo": 1500,
+    "player.carol.games_played": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "disk-now",
+  "kind": "witness",
+  "parents": ["genesis"],
+  "effects": {
+    "now.disk_pct": 73
+  }
+}

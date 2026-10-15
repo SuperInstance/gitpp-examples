@@ -1,0 +1,9 @@
+{
+  "id": "alert-state",
+  "kind": "task",
+  "parents": ["latency-bump", "latency-now", "error-rate-now", "disk-now"],
+  "effects": {
+    "alerts.firing_count": 0,
+    "alerts.suppressed": "latency_ms"
+  }
+}

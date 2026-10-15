@@ -1,0 +1,13 @@
+{
+  "id": "match-1",
+  "kind": "override",
+  "parents": ["alice", "bob"],
+  "effects": {
+    "match-1.winner": "alice",
+    "match-1.alice.elo_after": 1516,
+    "match-1.bob.elo_after": 1484,
+    "match-1.alice.games_after": 1,
+    "match-1.bob.games_after": 1
+  },
+  "reason": "alice beat bob, ELO delta ±16"
+}

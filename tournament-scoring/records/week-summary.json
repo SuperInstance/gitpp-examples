@@ -1,0 +1,10 @@
+{
+  "id": "week-summary",
+  "kind": "task",
+  "parents": ["final-standings"],
+  "effects": {
+    "tournament.week": 1,
+    "tournament.matches_played": 2,
+    "tournament.leader": "carol"
+  }
+}

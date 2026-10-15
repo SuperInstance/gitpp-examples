@@ -1,0 +1,10 @@
+{
+  "id": "latency-bump",
+  "kind": "override",
+  "parents": ["thresholds"],
+  "effects": {
+    "alert.latency_ms.warn": 400,
+    "alert.latency_ms.crit": 800
+  },
+  "reason": "planned migration 22:00-23:00, expected higher latency"
+}

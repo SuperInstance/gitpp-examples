@@ -1,0 +1,10 @@
+{
+  "id": "prod-config",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "env.prod.region": "us-east-1",
+    "env.prod.replicas": 6,
+    "env.prod.canary": false
+  }
+}

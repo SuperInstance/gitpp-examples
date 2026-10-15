@@ -1,0 +1,9 @@
+{
+  "id": "genesis",
+  "kind": "task",
+  "parents": [],
+  "effects": {
+    "project": "weekly-tournament",
+    "format": "round-robin"
+  }
+}

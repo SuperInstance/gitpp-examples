@@ -1,0 +1,127 @@
+[
+  {
+    "id": "alice",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "player.alice.elo": 1500,
+      "player.alice.games_played": 0
+    }
+  },
+  {
+    "id": "bob",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "player.bob.elo": 1500,
+      "player.bob.games_played": 0
+    }
+  },
+  {
+    "id": "carol",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "player.carol.elo": 1500,
+      "player.carol.games_played": 0
+    }
+  },
+  {
+    "id": "final-standings",
+    "kind": "task",
+    "parents": [
+      "match-1-witness",
+      "match-2-witness"
+    ],
+    "effects": {
+      "current.alice.elo": 1500,
+      "current.alice.wins": 1,
+      "current.alice.losses": 1,
+      "current.bob.elo": 1484,
+      "current.bob.wins": 0,
+      "current.bob.losses": 1,
+      "current.carol.elo": 1516,
+      "current.carol.wins": 1,
+      "current.carol.losses": 0
+    }
+  },
+  {
+    "id": "genesis",
+    "kind": "task",
+    "parents": [],
+    "effects": {
+      "project": "weekly-tournament",
+      "format": "round-robin"
+    }
+  },
+  {
+    "id": "match-1-witness",
+    "kind": "witness",
+    "parents": [
+      "match-1"
+    ],
+    "effects": {
+      "match-1.confirmed": true
+    }
+  },
+  {
+    "id": "match-1",
+    "kind": "override",
+    "parents": [
+      "alice",
+      "bob"
+    ],
+    "effects": {
+      "match-1.winner": "alice",
+      "match-1.alice.elo_after": 1516,
+      "match-1.bob.elo_after": 1484,
+      "match-1.alice.games_after": 1,
+      "match-1.bob.games_after": 1
+    },
+    "reason": "alice beat bob, ELO delta \u00b116"
+  },
+  {
+    "id": "match-2-witness",
+    "kind": "witness",
+    "parents": [
+      "match-2"
+    ],
+    "effects": {
+      "match-2.confirmed": true
+    }
+  },
+  {
+    "id": "match-2",
+    "kind": "override",
+    "parents": [
+      "carol",
+      "alice"
+    ],
+    "effects": {
+      "match-2.winner": "carol",
+      "match-2.carol.elo_after": 1516,
+      "match-2.alice.elo_after": 1500,
+      "match-2.carol.games_after": 1,
+      "match-2.alice.games_after": 2
+    },
+    "reason": "carol beat alice"
+  },
+  {
+    "id": "week-summary",
+    "kind": "task",
+    "parents": [
+      "final-standings"
+    ],
+    "effects": {
+      "tournament.week": 1,
+      "tournament.matches_played": 2,
+      "tournament.leader": "carol"
+    }
+  }
+]

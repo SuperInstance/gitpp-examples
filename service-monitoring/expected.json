@@ -1,0 +1,44 @@
+{
+  "at": "alert-state",
+  "closureRoot": "9a1a76c67d58ce6ad20b8200acd75919ae80c2be534d91cb722eb16b57c5cb8e",
+  "conflicts": [
+    {
+      "key": "alert.latency_ms.warn",
+      "losers": [
+        "thresholds"
+      ],
+      "winner": "latency-bump"
+    },
+    {
+      "key": "alert.latency_ms.crit",
+      "losers": [
+        "thresholds"
+      ],
+      "winner": "latency-bump"
+    }
+  ],
+  "orphanCount": 0,
+  "state": {
+    "alert.disk_pct.crit": 95,
+    "alert.disk_pct.warn": 80,
+    "alert.error_rate.crit": 0.05,
+    "alert.error_rate.warn": 0.01,
+    "alert.latency_ms.crit": 800,
+    "alert.latency_ms.warn": 400,
+    "alerts.firing_count": 0,
+    "alerts.suppressed": "latency_ms",
+    "env.prod.canary": false,
+    "env.prod.region": "us-east-1",
+    "env.prod.replicas": 6,
+    "env.staging.canary": true,
+    "env.staging.region": "us-east-2",
+    "env.staging.replicas": 2,
+    "now.disk_pct": 73,
+    "now.error_rate": 0.003,
+    "now.latency_ms": 142,
+    "now.timestamp": "2026-10-15T22:00:00Z",
+    "project": "service-monitor",
+    "service": "api",
+    "version": "1.4.2"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "grandma",
+  "kind": "witness",
+  "parents": ["genesis"],
+  "effects": {
+    "grandma.notes": "see kids Saturday"
+  }
+}

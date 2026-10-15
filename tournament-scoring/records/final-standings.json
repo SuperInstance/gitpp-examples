@@ -1,0 +1,16 @@
+{
+  "id": "final-standings",
+  "kind": "task",
+  "parents": ["match-1-witness", "match-2-witness"],
+  "effects": {
+    "current.alice.elo": 1500,
+    "current.alice.wins": 1,
+    "current.alice.losses": 1,
+    "current.bob.elo": 1484,
+    "current.bob.wins": 0,
+    "current.bob.losses": 1,
+    "current.carol.elo": 1516,
+    "current.carol.wins": 1,
+    "current.carol.losses": 0
+  }
+}

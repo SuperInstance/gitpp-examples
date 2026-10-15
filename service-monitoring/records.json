@@ -1,0 +1,109 @@
+[
+  {
+    "id": "alert-state",
+    "kind": "task",
+    "parents": [
+      "latency-bump",
+      "latency-now",
+      "error-rate-now",
+      "disk-now"
+    ],
+    "effects": {
+      "alerts.firing_count": 0,
+      "alerts.suppressed": "latency_ms"
+    }
+  },
+  {
+    "id": "disk-now",
+    "kind": "witness",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "now.disk_pct": 73
+    }
+  },
+  {
+    "id": "error-rate-now",
+    "kind": "witness",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "now.error_rate": 0.003,
+      "now.timestamp": "2026-10-15T22:00:00Z"
+    }
+  },
+  {
+    "id": "genesis",
+    "kind": "task",
+    "parents": [],
+    "effects": {
+      "project": "service-monitor",
+      "service": "api",
+      "version": "1.4.2"
+    }
+  },
+  {
+    "id": "latency-bump",
+    "kind": "override",
+    "parents": [
+      "thresholds"
+    ],
+    "effects": {
+      "alert.latency_ms.warn": 400,
+      "alert.latency_ms.crit": 800
+    },
+    "reason": "planned migration 22:00-23:00, expected higher latency"
+  },
+  {
+    "id": "latency-now",
+    "kind": "witness",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "now.latency_ms": 142,
+      "now.timestamp": "2026-10-15T22:00:00Z"
+    }
+  },
+  {
+    "id": "prod-config",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "env.prod.region": "us-east-1",
+      "env.prod.replicas": 6,
+      "env.prod.canary": false
+    }
+  },
+  {
+    "id": "staging-config",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "env.staging.region": "us-east-2",
+      "env.staging.replicas": 2,
+      "env.staging.canary": true
+    }
+  },
+  {
+    "id": "thresholds",
+    "kind": "task",
+    "parents": [
+      "genesis"
+    ],
+    "effects": {
+      "alert.latency_ms.warn": 200,
+      "alert.latency_ms.crit": 500,
+      "alert.error_rate.warn": 0.01,
+      "alert.error_rate.crit": 0.05,
+      "alert.disk_pct.warn": 80,
+      "alert.disk_pct.crit": 95
+    }
+  }
+]

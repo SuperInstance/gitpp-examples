@@ -1,0 +1,9 @@
+{
+  "id": "dr-visit",
+  "kind": "override",
+  "parents": ["caleb"],
+  "effects": {
+    "caleb.tuesday": "doctor"
+  },
+  "reason": "annual checkup, soccer can move"
+}

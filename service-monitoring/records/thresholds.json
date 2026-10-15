@@ -1,0 +1,13 @@
+{
+  "id": "thresholds",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "alert.latency_ms.warn": 200,
+    "alert.latency_ms.crit": 500,
+    "alert.error_rate.warn": 0.01,
+    "alert.error_rate.crit": 0.05,
+    "alert.disk_pct.warn": 80,
+    "alert.disk_pct.crit": 95
+  }
+}

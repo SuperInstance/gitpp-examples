@@ -1,0 +1,9 @@
+{
+  "id": "marina",
+  "kind": "task",
+  "parents": ["genesis"],
+  "effects": {
+    "marina.monday": "yoga",
+    "marina.wednesday": "book club"
+  }
+}
